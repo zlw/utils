@@ -1,11 +1,11 @@
 module Lotus
-  module Utils
+  module Utils  
     module Concern
       def append_features(base)
         super
         
-        mixin_class_methods
-        fire_included_callback
+        mixin_class_methods(base)
+        fire_included_callback(base)
       end
 
       def included(base = nil, &block)
